@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace MaestroMusic
 {
-    public partial class Login : Form
+    public partial class Player : Form
     {
-        public Login()
+        public Player()
         {
             InitializeComponent();
-        }
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            Close close = new Close();
-            close.Show();
         }
     }
 }
