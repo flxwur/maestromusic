@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_pw = new System.Windows.Forms.TextBox();
             this.btn_close = new System.Windows.Forms.Button();
-            this.pb_userBorder = new System.Windows.Forms.PictureBox();
-            this.pb_passwordBorder = new System.Windows.Forms.PictureBox();
-            this.pb_userIcon = new System.Windows.Forms.PictureBox();
-            this.pb_pswdIcon = new System.Windows.Forms.PictureBox();
-            this.pb_logo = new System.Windows.Forms.PictureBox();
             this.lbl_register1 = new System.Windows.Forms.Label();
             this.lbl_registerLink = new System.Windows.Forms.Label();
+            this.pb_logo = new System.Windows.Forms.PictureBox();
+            this.pb_pswdIcon = new System.Windows.Forms.PictureBox();
+            this.pb_userIcon = new System.Windows.Forms.PictureBox();
+            this.pb_userBorder = new System.Windows.Forms.PictureBox();
+            this.pb_passwordBorder = new System.Windows.Forms.PictureBox();
+            this.lbl_login = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pswdIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_userIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_userBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_passwordBorder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_userIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_pswdIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_username
@@ -86,61 +86,6 @@
             this.btn_close.UseVisualStyleBackColor = false;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // pb_userBorder
-            // 
-            this.pb_userBorder.BackColor = System.Drawing.Color.Transparent;
-            this.pb_userBorder.BackgroundImage = global::MaestroMusic.Properties.Resources.user_bg;
-            this.pb_userBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_userBorder.Location = new System.Drawing.Point(131, 172);
-            this.pb_userBorder.Name = "pb_userBorder";
-            this.pb_userBorder.Size = new System.Drawing.Size(132, 37);
-            this.pb_userBorder.TabIndex = 3;
-            this.pb_userBorder.TabStop = false;
-            // 
-            // pb_passwordBorder
-            // 
-            this.pb_passwordBorder.BackColor = System.Drawing.Color.Transparent;
-            this.pb_passwordBorder.BackgroundImage = global::MaestroMusic.Properties.Resources.user_bg;
-            this.pb_passwordBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_passwordBorder.Location = new System.Drawing.Point(131, 215);
-            this.pb_passwordBorder.Name = "pb_passwordBorder";
-            this.pb_passwordBorder.Size = new System.Drawing.Size(132, 37);
-            this.pb_passwordBorder.TabIndex = 4;
-            this.pb_passwordBorder.TabStop = false;
-            // 
-            // pb_userIcon
-            // 
-            this.pb_userIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pb_userIcon.BackgroundImage = global::MaestroMusic.Properties.Resources.user_white;
-            this.pb_userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_userIcon.Location = new System.Drawing.Point(135, 179);
-            this.pb_userIcon.Name = "pb_userIcon";
-            this.pb_userIcon.Size = new System.Drawing.Size(22, 23);
-            this.pb_userIcon.TabIndex = 5;
-            this.pb_userIcon.TabStop = false;
-            // 
-            // pb_pswdIcon
-            // 
-            this.pb_pswdIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pb_pswdIcon.BackgroundImage = global::MaestroMusic.Properties.Resources.paswd_white;
-            this.pb_pswdIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_pswdIcon.Location = new System.Drawing.Point(135, 219);
-            this.pb_pswdIcon.Name = "pb_pswdIcon";
-            this.pb_pswdIcon.Size = new System.Drawing.Size(22, 23);
-            this.pb_pswdIcon.TabIndex = 6;
-            this.pb_pswdIcon.TabStop = false;
-            // 
-            // pb_logo
-            // 
-            this.pb_logo.BackColor = System.Drawing.Color.Transparent;
-            this.pb_logo.BackgroundImage = global::MaestroMusic.Properties.Resources.logo_png;
-            this.pb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pb_logo.Location = new System.Drawing.Point(108, 43);
-            this.pb_logo.Name = "pb_logo";
-            this.pb_logo.Size = new System.Drawing.Size(176, 80);
-            this.pb_logo.TabIndex = 7;
-            this.pb_logo.TabStop = false;
-            // 
             // lbl_register1
             // 
             this.lbl_register1.AutoSize = true;
@@ -166,13 +111,83 @@
             this.lbl_registerLink.Text = "Registrieren";
             this.lbl_registerLink.Click += new System.EventHandler(this.lbl_registerLink_Click);
             // 
+            // pb_logo
+            // 
+            this.pb_logo.BackColor = System.Drawing.Color.Transparent;
+            this.pb_logo.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_logo_png1;
+            this.pb_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_logo.Location = new System.Drawing.Point(108, 43);
+            this.pb_logo.Name = "pb_logo";
+            this.pb_logo.Size = new System.Drawing.Size(176, 80);
+            this.pb_logo.TabIndex = 7;
+            this.pb_logo.TabStop = false;
+            // 
+            // pb_pswdIcon
+            // 
+            this.pb_pswdIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pb_pswdIcon.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_paswd_white;
+            this.pb_pswdIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_pswdIcon.Location = new System.Drawing.Point(135, 219);
+            this.pb_pswdIcon.Name = "pb_pswdIcon";
+            this.pb_pswdIcon.Size = new System.Drawing.Size(22, 23);
+            this.pb_pswdIcon.TabIndex = 6;
+            this.pb_pswdIcon.TabStop = false;
+            // 
+            // pb_userIcon
+            // 
+            this.pb_userIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pb_userIcon.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_user_white;
+            this.pb_userIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_userIcon.Location = new System.Drawing.Point(135, 179);
+            this.pb_userIcon.Name = "pb_userIcon";
+            this.pb_userIcon.Size = new System.Drawing.Size(22, 23);
+            this.pb_userIcon.TabIndex = 5;
+            this.pb_userIcon.TabStop = false;
+            // 
+            // pb_userBorder
+            // 
+            this.pb_userBorder.BackColor = System.Drawing.Color.Transparent;
+            this.pb_userBorder.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_user_bg;
+            this.pb_userBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_userBorder.Location = new System.Drawing.Point(131, 172);
+            this.pb_userBorder.Name = "pb_userBorder";
+            this.pb_userBorder.Size = new System.Drawing.Size(132, 37);
+            this.pb_userBorder.TabIndex = 3;
+            this.pb_userBorder.TabStop = false;
+            // 
+            // pb_passwordBorder
+            // 
+            this.pb_passwordBorder.BackColor = System.Drawing.Color.Transparent;
+            this.pb_passwordBorder.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_user_bg;
+            this.pb_passwordBorder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_passwordBorder.Location = new System.Drawing.Point(131, 214);
+            this.pb_passwordBorder.Name = "pb_passwordBorder";
+            this.pb_passwordBorder.Size = new System.Drawing.Size(132, 37);
+            this.pb_passwordBorder.TabIndex = 10;
+            this.pb_passwordBorder.TabStop = false;
+            // 
+            // lbl_login
+            // 
+            this.lbl_login.AutoSize = true;
+            this.lbl_login.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_login.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Underline);
+            this.lbl_login.ForeColor = System.Drawing.Color.White;
+            this.lbl_login.Location = new System.Drawing.Point(170, 292);
+            this.lbl_login.Name = "lbl_login";
+            this.lbl_login.Size = new System.Drawing.Size(49, 19);
+            this.lbl_login.TabIndex = 11;
+            this.lbl_login.Text = "Login";
+            this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MaestroMusic.Properties.Resources.bglogin;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_bglogin1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.lbl_login);
             this.Controls.Add(this.lbl_registerLink);
             this.Controls.Add(this.lbl_register1);
             this.Controls.Add(this.pb_logo);
@@ -183,14 +198,13 @@
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.pb_userBorder);
             this.Controls.Add(this.pb_passwordBorder);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Login";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pswdIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_userIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_userBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_passwordBorder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_userIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_pswdIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,12 +216,13 @@
         private System.Windows.Forms.TextBox tb_pw;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.PictureBox pb_userBorder;
-        private System.Windows.Forms.PictureBox pb_passwordBorder;
         private System.Windows.Forms.PictureBox pb_userIcon;
         private System.Windows.Forms.PictureBox pb_pswdIcon;
         private System.Windows.Forms.PictureBox pb_logo;
         private System.Windows.Forms.Label lbl_register1;
         private System.Windows.Forms.Label lbl_registerLink;
+        private System.Windows.Forms.PictureBox pb_passwordBorder;
+        private System.Windows.Forms.Label lbl_login;
     }
 }
 

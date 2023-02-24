@@ -61,6 +61,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Close.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Close.Designer.cs">
+      <DependentUpon>frm_Close.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Player.Designer.cs">
+      <DependentUpon>frm_Player.cs</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +93,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,6 +104,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -97,6 +119,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_pswd_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_user_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_paswd white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_user white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_logo png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\rl_bglogin1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
