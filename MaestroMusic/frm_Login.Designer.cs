@@ -30,7 +30,6 @@
         {
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_pw = new System.Windows.Forms.TextBox();
-            this.btn_close = new System.Windows.Forms.Button();
             this.lbl_register1 = new System.Windows.Forms.Label();
             this.lbl_registerLink = new System.Windows.Forms.Label();
             this.pb_logo = new System.Windows.Forms.PictureBox();
@@ -70,21 +69,6 @@
             this.tb_pw.Size = new System.Drawing.Size(91, 18);
             this.tb_pw.TabIndex = 1;
             this.tb_pw.Text = "password";
-            // 
-            // btn_close
-            // 
-            this.btn_close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(28)))), ((int)(((byte)(29)))));
-            this.btn_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(48)))), ((int)(((byte)(253)))));
-            this.btn_close.Location = new System.Drawing.Point(342, 12);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(30, 30);
-            this.btn_close.TabIndex = 2;
-            this.btn_close.Text = "X";
-            this.btn_close.UseVisualStyleBackColor = false;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // lbl_register1
             // 
@@ -193,7 +177,6 @@
             this.Controls.Add(this.pb_logo);
             this.Controls.Add(this.pb_pswdIcon);
             this.Controls.Add(this.pb_userIcon);
-            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.tb_pw);
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.pb_userBorder);
@@ -214,7 +197,6 @@
 
         private System.Windows.Forms.TextBox tb_username;
         private System.Windows.Forms.TextBox tb_pw;
-        private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.PictureBox pb_userBorder;
         private System.Windows.Forms.PictureBox pb_userIcon;
         private System.Windows.Forms.PictureBox pb_pswdIcon;
