@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 //Sql usings
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace MaestroMusic.Classes
 {
@@ -42,8 +43,7 @@ namespace MaestroMusic.Classes
             try
             {
                 conn.Close();
-                connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";
-                conn.ConnectionString = connectionstring;
+                connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";     
             }
             catch (Exception ex)
             {
@@ -57,7 +57,8 @@ namespace MaestroMusic.Classes
             try
             {
                 conn.Close();
-                connectionstring = connectionstring + " database = " + db + " ;";
+                connectionstring = connectionstring + " database = " + db + " ;";               //Sensless bc only one
+                conn.ConnectionString = connectionstring;                                       //Database will be used
                 conn.ConnectionString = connectionstring;
             }
             catch (Exception ex)
@@ -104,12 +105,12 @@ namespace MaestroMusic.Classes
             }
         }
 
-        public void createDatabase(string dbname)
+        public void createDatabase(string dbname)                  
         {
             try
             {
-                bool IsExits = CheckDatabaseExists2(conn, dbname);
-
+                bool IsExits = CheckDatabaseExists(conn, dbname);
+                 
                 if (!IsExits)
                 {
                     conn.Open();
@@ -131,7 +132,7 @@ namespace MaestroMusic.Classes
                 MessageBox.Show(ex.ToString());
             }
 
-        }
+        }//No DB will be created
 
 
         //executes a command without return from user input
@@ -189,21 +190,21 @@ namespace MaestroMusic.Classes
 
         }
 
-        private static bool CheckDatabaseExists2(SqlConnection tmpConn, string databaseName)
+        private static bool CheckDatabaseExists(SqlConnection tmpConn, string databaseName)
         {
             string sqlCreateDBQuery;
             bool result = false;
             try
             {
                 sqlCreateDBQuery = string.Format("SELECT database_id FROM sys.databases WHERE Name = '{0}'", databaseName);
-                // databaseName wird in 0 eingefügt und zeigt die id an von allen databases die 0 besitzten.
+                // databaseName gets a value of 0, shows every Database with the value 0
 
-                //test connects die  database mit der id und der conn gegeben
+                //test the connection to the Database with id and conn
                 SqlCommand sqlCmd = new SqlCommand(sqlCreateDBQuery, tmpConn);
 
                 tmpConn.Open();
                 object resultObj = sqlCmd.ExecuteScalar(); ;
-                //.ExecuteScalar gibt erste Reihe des Befehls zurück dieses wird in resultObj gespeichert
+                //.ExecuteScalar returns the first row of the command and safes it in resultObj.
 
                 if (resultObj != null)
                 {
@@ -220,4 +221,5 @@ namespace MaestroMusic.Classes
             return result;
         }
     }
+    #endregion
 }
