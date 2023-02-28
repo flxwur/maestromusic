@@ -18,12 +18,6 @@ namespace MaestroMusic
             InitializeComponent();
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            frm_Close close = new frm_Close();
-            close.ShowDialog();
-        }
-
         private void lbl_registerLink_Click(object sender, EventArgs e)
         {
             //register
