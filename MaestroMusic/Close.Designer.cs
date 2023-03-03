@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Close));
             this.lbl_close = new System.Windows.Forms.Label();
             this.btn_doClose = new System.Windows.Forms.Button();
             this.btn_noClose = new System.Windows.Forms.Button();
@@ -78,6 +79,7 @@
             this.Controls.Add(this.btn_noClose);
             this.Controls.Add(this.btn_doClose);
             this.Controls.Add(this.lbl_close);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Close";
             this.Text = "Close";
             this.ResumeLayout(false);

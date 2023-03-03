@@ -55,18 +55,6 @@
     <Compile Include="Close.Designer.cs">
       <DependentUpon>Close.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Close.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Close.Designer.cs">
-      <DependentUpon>frm_Close.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,22 +67,25 @@
     <Compile Include="frm_Player.Designer.cs">
       <DependentUpon>frm_Player.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs">
+    <Compile Include="frm_Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Player.Designer.cs">
-      <DependentUpon>Player.cs</DependentUpon>
+    <Compile Include="frm_Register.Designer.cs">
+      <DependentUpon>frm_Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Close.resx">
       <DependentUpon>Close.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Player.resx">
+      <DependentUpon>frm_Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Register.resx">
+      <DependentUpon>frm_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reloaded\rl_bglogin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\register-border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\mail-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

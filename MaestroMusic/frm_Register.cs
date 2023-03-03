@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MaestroMusic
 {
-    public partial class Player : Form
+    public partial class frm_Register : Form
     {
-        public Player()
+        public frm_Register()
         {
             InitializeComponent();
         }

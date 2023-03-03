@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             this.tb_username = new System.Windows.Forms.TextBox();
             this.tb_pw = new System.Windows.Forms.TextBox();
             this.lbl_register1 = new System.Windows.Forms.Label();
@@ -162,6 +163,8 @@
             this.lbl_login.TabIndex = 11;
             this.lbl_login.Text = "Login";
             this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);
+            this.lbl_login.MouseEnter += new System.EventHandler(this.frm_Login_Hover);
+            this.lbl_login.MouseLeave += new System.EventHandler(this.frm_Login_HoverOff);
             // 
             // frm_Login
             // 
@@ -181,8 +184,10 @@
             this.Controls.Add(this.tb_username);
             this.Controls.Add(this.pb_userBorder);
             this.Controls.Add(this.pb_passwordBorder);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pswdIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_userIcon)).EndInit();
