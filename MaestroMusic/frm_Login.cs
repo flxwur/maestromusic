@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MaestroMusic.Classes;
+
 
 namespace MaestroMusic
 {
@@ -26,6 +28,12 @@ namespace MaestroMusic
         private void lbl_login_Click(object sender, EventArgs e)
         {
             //login
+            string name = tb_username.Text;
+            string pswd = tb_pw.Text;
+
+            Bcrypt bc = new Bcrypt;
+
+        
         }
     }
 }
