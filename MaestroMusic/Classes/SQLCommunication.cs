@@ -106,30 +106,7 @@ namespace MaestroMusic.Classes
 
         public void createDatabase(string dbname)
         {
-            try
-            {
-                bool IsExits = CheckDatabaseExists2(conn, dbname);
-
-                if (!IsExits)
-                {
-                    conn.Open();
-                    SqlCommand dbcreate_sqlCommand = conn.CreateCommand();
-                    dbcreate_sqlCommand.CommandText = "CREATE DATABASE " + dbname;
-                    dbcreate_sqlCommand.ExecuteNonQuery();
-                    MessageBox.Show("Database " + dbname + " succesfully created!");
-                    conn.Close();
-                }
-                else
-                {
-                    MessageBox.Show("This database with the name " + dbname + " already exists!");
-                }
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error while creating database with the name " + dbname);
-                MessageBox.Show(ex.ToString());
-            }
+            
 
         }
 
@@ -221,3 +198,4 @@ namespace MaestroMusic.Classes
         }
     }
 }
+#endregion

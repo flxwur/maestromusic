@@ -19,7 +19,17 @@ namespace MaestroMusic
 
         private void btn_doClose_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            //login form with constructor login passen
+            frm_Login LogedIn = new frm_Login();
+            this.Hide();
+            LogedIn.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_noClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+           
         }
     }
 }

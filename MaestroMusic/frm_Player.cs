@@ -16,5 +16,14 @@ namespace MaestroMusic
         {
             InitializeComponent();
         }
+
+        private void pb_userIcon_Click(object sender, EventArgs e)
+        {
+            //login form with constructor login passen
+            Close LogedIn = new Close();
+            this.Hide();
+            LogedIn.ShowDialog();
+            this.Show();
+        }
     }
 }
