@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\BCrypt.cs" />
+    <Compile Include="Classes\SQLCommunication.cs" />
     <Compile Include="Close.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MaestroMusic.Classes;
+
 
 namespace MaestroMusic
 {
@@ -18,12 +20,6 @@ namespace MaestroMusic
             InitializeComponent();
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            frm_Close close = new frm_Close();
-            close.ShowDialog();
-        }
-
         private void lbl_registerLink_Click(object sender, EventArgs e)
         {
             //register
@@ -32,6 +28,12 @@ namespace MaestroMusic
         private void lbl_login_Click(object sender, EventArgs e)
         {
             //login
+            string name = tb_username.Text;
+            string pswd = tb_pw.Text;
+
+            Bcrypt bc = new Bcrypt;
+
+        
         }
     }
 }
