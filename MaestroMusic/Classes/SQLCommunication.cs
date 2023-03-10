@@ -37,41 +37,51 @@ namespace MaestroMusic.Classes
         #endregion
         #region generaldb
 
-        // changes the connection string for a sspi connection
-        public void changeConnstringSSPI(string adresse)
+        public void connectDatabase(string username, string password)
         {
-            try
-            {
-                conn.Close();
-                connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";     
-            }
-            catch (Exception ex)
-            {
-
-            }
+            connectionstring = "server=web.hak-kitz.eu/f.wurzer ;" + " User ID=" + username + ";Password=" + password + ";";
+            conn.ChangeDatabase(connectionstring);
+            conn.Open();
         }
+
+
+        // changes the connection string for a sspi connection
+        //public void changeConnstringSSPI(string adresse)
+        //{
+        //    try
+        //    {
+        //        conn.Close();
+        //        connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";     
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //    }
+        //}
 
         // changes the connection string for a new database
-        public void changeConnstringDatabase(string db)
-        {
-            try
-            {
-                conn.Close();
-                connectionstring = connectionstring + " database = " + db + " ;";               //Sensless bc only one
-                conn.ConnectionString = connectionstring;                                       //Database will be used
-                conn.ConnectionString = connectionstring;
-            }
-            catch (Exception ex)
-            {
+        //public void changeConnstringDatabase(string db)
+        //{
+        //    try
+        //    {
+        //        conn.Close();
+        //        connectionstring = connectionstring + " database = " + db + " ;";               //Sensless bc only one
+        //        conn.ConnectionString = connectionstring;                                       //Database will be used
+        //        conn.ConnectionString = connectionstring;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-            }
-        }
+        //    }
+        //}
+
+
         // changes the connection string for a connection with username and password
-        public void changeConnstring(string adresse, string username, string password)
-        {
-            connectionstring = "server=" + adresse + ";" + " User ID=" + username + ";Password=" + password + ";";
-            conn.ConnectionString = connectionstring;
-        }
+        //public void changeConnstring(string adresse, string username, string password)
+        //{
+        //    connectionstring = "server=" + adresse + ";" + " User ID=" + username + ";Password=" + password + ";";
+        //    conn.ConnectionString = connectionstring;
+        //}
 
         // opens and closes Sql for test use
         public bool sqlOpen()
