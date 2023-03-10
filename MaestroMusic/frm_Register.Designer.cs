@@ -41,6 +41,9 @@
             this.pb_mailIcon = new System.Windows.Forms.PictureBox();
             this.pb_pswdIcon1 = new System.Windows.Forms.PictureBox();
             this.pb_pswdIcon2 = new System.Windows.Forms.PictureBox();
+            this.lbl_Register = new System.Windows.Forms.Label();
+            this.lbl_login = new System.Windows.Forms.Label();
+            this.lbl_loginLink = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -189,6 +192,44 @@
             this.pb_pswdIcon2.TabIndex = 19;
             this.pb_pswdIcon2.TabStop = false;
             // 
+            // lbl_Register
+            // 
+            this.lbl_Register.AutoSize = true;
+            this.lbl_Register.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Register.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Underline);
+            this.lbl_Register.ForeColor = System.Drawing.Color.White;
+            this.lbl_Register.Location = new System.Drawing.Point(156, 316);
+            this.lbl_Register.Name = "lbl_Register";
+            this.lbl_Register.Size = new System.Drawing.Size(69, 19);
+            this.lbl_Register.TabIndex = 20;
+            this.lbl_Register.Text = "Register";
+            this.lbl_Register.Click += new System.EventHandler(this.lbl_Register_Click);
+            // 
+            // lbl_login
+            // 
+            this.lbl_login.AutoSize = true;
+            this.lbl_login.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_login.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.lbl_login.ForeColor = System.Drawing.Color.White;
+            this.lbl_login.Location = new System.Drawing.Point(105, 394);
+            this.lbl_login.Name = "lbl_login";
+            this.lbl_login.Size = new System.Drawing.Size(137, 14);
+            this.lbl_login.TabIndex = 21;
+            this.lbl_login.Text = "Du hast bereits ein Konto? ";
+            // 
+            // lbl_loginLink
+            // 
+            this.lbl_loginLink.AutoSize = true;
+            this.lbl_loginLink.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_loginLink.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_loginLink.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(61)))), ((int)(((byte)(242)))));
+            this.lbl_loginLink.Location = new System.Drawing.Point(238, 394);
+            this.lbl_loginLink.Name = "lbl_loginLink";
+            this.lbl_loginLink.Size = new System.Drawing.Size(33, 14);
+            this.lbl_loginLink.TabIndex = 22;
+            this.lbl_loginLink.Text = "Login";
+            this.lbl_loginLink.Click += new System.EventHandler(this.lbl_loginLink_Click);
+            // 
             // frm_Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +237,9 @@
             this.BackgroundImage = global::MaestroMusic.Properties.Resources.rl_bglogin1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(380, 450);
+            this.Controls.Add(this.lbl_loginLink);
+            this.Controls.Add(this.lbl_login);
+            this.Controls.Add(this.lbl_Register);
             this.Controls.Add(this.pb_pswdIcon2);
             this.Controls.Add(this.pb_pswdIcon1);
             this.Controls.Add(this.pb_mailIcon);
@@ -238,5 +282,8 @@
         private System.Windows.Forms.PictureBox pb_mailIcon;
         private System.Windows.Forms.PictureBox pb_pswdIcon1;
         private System.Windows.Forms.PictureBox pb_pswdIcon2;
+        private System.Windows.Forms.Label lbl_Register;
+        private System.Windows.Forms.Label lbl_login;
+        private System.Windows.Forms.Label lbl_loginLink;
     }
 }

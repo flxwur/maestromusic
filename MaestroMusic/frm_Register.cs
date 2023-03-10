@@ -16,5 +16,26 @@ namespace MaestroMusic
         {
             InitializeComponent();
         }
+
+        private void lbl_loginLink_Click(object sender, EventArgs e)
+        {
+            // back to Login
+            this.Close();
+        }
+
+        private void lbl_Register_Click(object sender, EventArgs e)
+        {
+
+            //check if data is valid
+            //register in database
+
+            //login
+
+            //login form with constructor login passen
+            frm_Player LogedIn = new frm_Player();
+            this.Hide();
+            LogedIn.ShowDialog();
+            this.Show();
+        }
     }
 }
