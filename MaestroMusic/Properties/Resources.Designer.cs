@@ -133,6 +133,26 @@ namespace MaestroMusic.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap play_icon {
+            get {
+                object obj = ResourceManager.GetObject("play-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("play-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pop {
             get {
                 object obj = ResourceManager.GetObject("pop", resourceCulture);
@@ -146,6 +166,16 @@ namespace MaestroMusic.Properties {
         internal static System.Drawing.Bitmap register_border {
             get {
                 object obj = ResourceManager.GetObject("register-border", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap register_border1 {
+            get {
+                object obj = ResourceManager.GetObject("register-border1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +246,16 @@ namespace MaestroMusic.Properties {
         internal static System.Drawing.Bitmap rl_user_white {
             get {
                 object obj = ResourceManager.GetObject("rl_user white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap songbox {
+            get {
+                object obj = ResourceManager.GetObject("songbox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

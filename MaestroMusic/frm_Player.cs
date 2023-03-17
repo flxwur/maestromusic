@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaestroMusic.Classes;
 
 namespace MaestroMusic
 {
@@ -28,7 +29,7 @@ namespace MaestroMusic
 
         private void pb_classical_MouseHover(object sender, EventArgs e)
         {
-            pb_classical.Size = new Size(130, 130);
+            
         }
 
         // Categories 
@@ -36,7 +37,11 @@ namespace MaestroMusic
 
         private void pb_classical_Click(object sender, EventArgs e)
         {
-
+            //login form with constructor login passen
+            frm_Category category = new frm_Category();
+            this.Hide();
+            category.ShowDialog();
+            this.Show();
         }
 
         private void pb_pop_Click(object sender, EventArgs e)
@@ -63,6 +68,12 @@ namespace MaestroMusic
         {
 
         }
+
+        
         #endregion
+
+
+
+        //leave  pb_classical.Size = new Size(130, 130);
     }
 }

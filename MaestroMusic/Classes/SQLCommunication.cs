@@ -104,13 +104,6 @@ namespace MaestroMusic.Classes
             }
         }
 
-        public void createDatabase(string dbname)
-        {
-            
-
-        }
-
-
         //executes a command without return from user input
         public void sqlCommandNoReturn(string commandline)
         {
