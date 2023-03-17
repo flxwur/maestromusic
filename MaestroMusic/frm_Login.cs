@@ -23,17 +23,37 @@ namespace MaestroMusic
         private void lbl_registerLink_Click(object sender, EventArgs e)
         {
             //register
+            frm_Register Register = new frm_Register();
+            this.Hide();
+            Register.ShowDialog();
+            this.Show();
         }
 
         private void lbl_login_Click(object sender, EventArgs e)
         {
             //login
-            string name = tb_username.Text;
-            string pswd = tb_pw.Text;
+            
+            //check with database
 
-            Bcrypt bc = new Bcrypt;
+            //login form with constructor login passen
+            frm_Player LogedIn = new frm_Player();
+            this.Hide();
+            LogedIn.ShowDialog();
+            this.Show();
+        }
 
-        
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void frm_Login_Hover(object sender, EventArgs e)
+        {
+            lbl_login.Font = new Font(lbl_login.Font.Name, lbl_login.Font.SizeInPoints, FontStyle.Underline);
+        }
+        private void frm_Login_HoverOff(object sender, EventArgs e)
+        {
+            lbl_login.Font = new Font(lbl_login.Font.Name, lbl_login.Font.SizeInPoints, FontStyle.Regular);
         }
     }
-}
+    }
+    
