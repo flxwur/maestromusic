@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 //Sql usings
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace MaestroMusic.Classes
 {
@@ -36,41 +37,51 @@ namespace MaestroMusic.Classes
         #endregion
         #region generaldb
 
-        // changes the connection string for a sspi connection
-        public void changeConnstringSSPI(string adresse)
+        public void connectDatabase(string username, string password)
         {
-            try
-            {
-                conn.Close();
-                connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";
-                conn.ConnectionString = connectionstring;
-            }
-            catch (Exception ex)
-            {
-
-            }
+            connectionstring = "server=web.hak-kitz.eu/f.wurzer ;" + " User ID=" + username + ";Password=" + password + ";";
+            conn.ChangeDatabase(connectionstring);
+            conn.Open();
         }
+
+
+        // changes the connection string for a sspi connection
+        //public void changeConnstringSSPI(string adresse)
+        //{
+        //    try
+        //    {
+        //        conn.Close();
+        //        connectionstring = "server=" + adresse + ";" + " Integrated Security = true; ";     
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //    }
+        //}
 
         // changes the connection string for a new database
-        public void changeConnstringDatabase(string db)
-        {
-            try
-            {
-                conn.Close();
-                connectionstring = connectionstring + " database = " + db + " ;";
-                conn.ConnectionString = connectionstring;
-            }
-            catch (Exception ex)
-            {
+        //public void changeConnstringDatabase(string db)
+        //{
+        //    try
+        //    {
+        //        conn.Close();
+        //        connectionstring = connectionstring + " database = " + db + " ;";               //Sensless bc only one
+        //        conn.ConnectionString = connectionstring;                                       //Database will be used
+        //        conn.ConnectionString = connectionstring;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-            }
-        }
+        //    }
+        //}
+
+
         // changes the connection string for a connection with username and password
-        public void changeConnstring(string adresse, string username, string password)
-        {
-            connectionstring = "server=" + adresse + ";" + " User ID=" + username + ";Password=" + password + ";";
-            conn.ConnectionString = connectionstring;
-        }
+        //public void changeConnstring(string adresse, string username, string password)
+        //{
+        //    connectionstring = "server=" + adresse + ";" + " User ID=" + username + ";Password=" + password + ";";
+        //    conn.ConnectionString = connectionstring;
+        //}
 
         // opens and closes Sql for test use
         public bool sqlOpen()
@@ -103,6 +114,13 @@ namespace MaestroMusic.Classes
                 return false;
             }
         }
+
+
+        {
+            
+
+        }
+
 
         //executes a command without return from user input
         public void sqlCommandNoReturn(string commandline)
@@ -159,21 +177,21 @@ namespace MaestroMusic.Classes
 
         }
 
-        private static bool CheckDatabaseExists2(SqlConnection tmpConn, string databaseName)
+        private static bool CheckDatabaseExists(SqlConnection tmpConn, string databaseName)
         {
             string sqlCreateDBQuery;
             bool result = false;
             try
             {
                 sqlCreateDBQuery = string.Format("SELECT database_id FROM sys.databases WHERE Name = '{0}'", databaseName);
-                // databaseName wird in 0 eingefügt und zeigt die id an von allen databases die 0 besitzten.
+                // databaseName gets a value of 0, shows every Database with the value 0
 
-                //test connects die  database mit der id und der conn gegeben
+                //test the connection to the Database with id and conn
                 SqlCommand sqlCmd = new SqlCommand(sqlCreateDBQuery, tmpConn);
 
                 tmpConn.Open();
                 object resultObj = sqlCmd.ExecuteScalar(); ;
-                //.ExecuteScalar gibt erste Reihe des Befehls zurück dieses wird in resultObj gespeichert
+                //.ExecuteScalar returns the first row of the command and safes it in resultObj.
 
                 if (resultObj != null)
                 {
@@ -190,5 +208,6 @@ namespace MaestroMusic.Classes
             return result;
         }
     }
+    #endregion
 }
 #endregion
