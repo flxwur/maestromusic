@@ -80,6 +80,7 @@
             this.pb_hardstyle.Size = new System.Drawing.Size(125, 125);
             this.pb_hardstyle.TabIndex = 16;
             this.pb_hardstyle.TabStop = false;
+            this.pb_hardstyle.Click += new System.EventHandler(this.pb_hardstyle_Click);
             // 
             // pb_electronic
             // 
@@ -90,6 +91,7 @@
             this.pb_electronic.Size = new System.Drawing.Size(125, 125);
             this.pb_electronic.TabIndex = 15;
             this.pb_electronic.TabStop = false;
+            this.pb_electronic.Click += new System.EventHandler(this.pb_electronic_Click);
             // 
             // pb_country
             // 
@@ -100,6 +102,7 @@
             this.pb_country.Size = new System.Drawing.Size(125, 125);
             this.pb_country.TabIndex = 14;
             this.pb_country.TabStop = false;
+            this.pb_country.Click += new System.EventHandler(this.pb_country_Click);
             // 
             // pb_hiphop
             // 
@@ -110,6 +113,7 @@
             this.pb_hiphop.Size = new System.Drawing.Size(125, 125);
             this.pb_hiphop.TabIndex = 13;
             this.pb_hiphop.TabStop = false;
+            this.pb_hiphop.Click += new System.EventHandler(this.pb_hiphop_Click);
             // 
             // pb_pop
             // 
@@ -120,6 +124,7 @@
             this.pb_pop.Size = new System.Drawing.Size(125, 125);
             this.pb_pop.TabIndex = 12;
             this.pb_pop.TabStop = false;
+            this.pb_pop.Click += new System.EventHandler(this.pb_pop_Click);
             // 
             // pb_classical
             // 
@@ -130,6 +135,8 @@
             this.pb_classical.Size = new System.Drawing.Size(125, 125);
             this.pb_classical.TabIndex = 11;
             this.pb_classical.TabStop = false;
+            this.pb_classical.Click += new System.EventHandler(this.pb_classical_Click);
+            this.pb_classical.MouseHover += new System.EventHandler(this.pb_classical_MouseHover);
             // 
             // pb_logoRightTop
             // 
