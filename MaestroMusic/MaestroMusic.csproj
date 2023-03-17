@@ -137,5 +137,23 @@
   <ItemGroup>
     <None Include="Resources\reloaded\mail-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\classical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\country.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\electronic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\hardstyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\hiphop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\pop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
