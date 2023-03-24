@@ -50,12 +50,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\BCrypt.cs" />
-    <Compile Include="Classes\SQLCommunication.cs" />
     <Compile Include="Close.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Close.Designer.cs">
       <DependentUpon>Close.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Category.Designer.cs">
+      <DependentUpon>frm_Category.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Login.cs">
       <SubType>Form</SubType>
@@ -79,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Close.resx">
       <DependentUpon>Close.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Category.resx">
+      <DependentUpon>frm_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -154,6 +162,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reloaded\pop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\songbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\play-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reloaded\play-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
