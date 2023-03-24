@@ -31,18 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Category));
             this.lbl_h2 = new System.Windows.Forms.Label();
             this.lbl_h1 = new System.Windows.Forms.Label();
+            this.prgsbar_songlength = new System.Windows.Forms.ProgressBar();
+            this.lbl_length0 = new System.Windows.Forms.Label();
+            this.lbl_length1 = new System.Windows.Forms.Label();
+            this.pb_playPause = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_logoRightTop = new System.Windows.Forms.PictureBox();
+            this.pb_pausePlay = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_h2
@@ -55,6 +62,7 @@
             this.lbl_h2.Size = new System.Drawing.Size(166, 25);
             this.lbl_h2.TabIndex = 11;
             this.lbl_h2.Text = "Maestro Music";
+            this.lbl_h2.Click += new System.EventHandler(this.lbl_h2_Click);
             // 
             // lbl_h1
             // 
@@ -66,6 +74,46 @@
             this.lbl_h1.Size = new System.Drawing.Size(174, 25);
             this.lbl_h1.TabIndex = 12;
             this.lbl_h1.Text = "Category Name";
+            // 
+            // prgsbar_songlength
+            // 
+            this.prgsbar_songlength.Location = new System.Drawing.Point(22, 400);
+            this.prgsbar_songlength.Name = "prgsbar_songlength";
+            this.prgsbar_songlength.Size = new System.Drawing.Size(759, 11);
+            this.prgsbar_songlength.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.prgsbar_songlength.TabIndex = 18;
+            this.prgsbar_songlength.Value = 50;
+            // 
+            // lbl_length0
+            // 
+            this.lbl_length0.AutoSize = true;
+            this.lbl_length0.ForeColor = System.Drawing.Color.White;
+            this.lbl_length0.Location = new System.Drawing.Point(19, 384);
+            this.lbl_length0.Name = "lbl_length0";
+            this.lbl_length0.Size = new System.Drawing.Size(28, 13);
+            this.lbl_length0.TabIndex = 19;
+            this.lbl_length0.Text = "0:00";
+            // 
+            // lbl_length1
+            // 
+            this.lbl_length1.AutoSize = true;
+            this.lbl_length1.ForeColor = System.Drawing.Color.White;
+            this.lbl_length1.Location = new System.Drawing.Point(753, 384);
+            this.lbl_length1.Name = "lbl_length1";
+            this.lbl_length1.Size = new System.Drawing.Size(28, 13);
+            this.lbl_length1.TabIndex = 20;
+            this.lbl_length1.Text = "4:20";
+            // 
+            // pb_playPause
+            // 
+            this.pb_playPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_playPause.BackgroundImage")));
+            this.pb_playPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_playPause.Location = new System.Drawing.Point(387, 365);
+            this.pb_playPause.Name = "pb_playPause";
+            this.pb_playPause.Size = new System.Drawing.Size(31, 29);
+            this.pb_playPause.TabIndex = 21;
+            this.pb_playPause.TabStop = false;
+            this.pb_playPause.Click += new System.EventHandler(this.pb_playPause_Click);
             // 
             // pictureBox5
             // 
@@ -127,6 +175,20 @@
             this.pb_logoRightTop.Size = new System.Drawing.Size(71, 40);
             this.pb_logoRightTop.TabIndex = 10;
             this.pb_logoRightTop.TabStop = false;
+            this.pb_logoRightTop.Click += new System.EventHandler(this.pb_logoRightTop_Click);
+            // 
+            // pb_pausePlay
+            // 
+            this.pb_pausePlay.BackgroundImage = global::MaestroMusic.Properties.Resources.pause_button;
+            this.pb_pausePlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_pausePlay.Enabled = false;
+            this.pb_pausePlay.Location = new System.Drawing.Point(387, 365);
+            this.pb_pausePlay.Name = "pb_pausePlay";
+            this.pb_pausePlay.Size = new System.Drawing.Size(31, 29);
+            this.pb_pausePlay.TabIndex = 22;
+            this.pb_pausePlay.TabStop = false;
+            this.pb_pausePlay.Visible = false;
+            this.pb_pausePlay.Click += new System.EventHandler(this.pb_pausePlay_Click);
             // 
             // frm_Category
             // 
@@ -134,6 +196,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_pausePlay);
+            this.Controls.Add(this.pb_playPause);
+            this.Controls.Add(this.lbl_length1);
+            this.Controls.Add(this.lbl_length0);
+            this.Controls.Add(this.prgsbar_songlength);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -145,12 +212,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Category";
             this.Text = "Player";
+            ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +235,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.ProgressBar prgsbar_songlength;
+        private System.Windows.Forms.Label lbl_length0;
+        private System.Windows.Forms.Label lbl_length1;
+        private System.Windows.Forms.PictureBox pb_playPause;
+        private System.Windows.Forms.PictureBox pb_pausePlay;
     }
 }
