@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\BCrypt.cs" />
-    <Compile Include="Classes\SQLCommunication.cs" />
     <Compile Include="Close.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +171,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reloaded\play-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
