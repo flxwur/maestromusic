@@ -27,15 +27,29 @@ namespace MaestroMusic
         {
 
             //check if data is valid
-            //register in database
+            string username = txtBox_user.Text;
+            string mail = txtBox_mail.Text;
+            string pw = txtBox_PW.Text;
+            string confirmPW = txtBox_confirmPW.Text;
 
-            //login
+            if (confirmPW.Equals(pw) && pw.Length >= 8)
+            {
+                //register in database
 
-            //login form with constructor login passen
-            frm_Player LogedIn = new frm_Player();
-            this.Hide();
-            LogedIn.ShowDialog();
-            this.Show();
+                //login
+
+                //login form with constructor login passen
+                frm_Player LogedIn = new frm_Player();
+                this.Hide();
+                LogedIn.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match aren't over 8 characters!");
+            }
+
+            
         }
     }
 }

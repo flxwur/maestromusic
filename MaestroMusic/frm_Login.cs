@@ -22,7 +22,7 @@ namespace MaestroMusic
 
         private void lbl_registerLink_Click(object sender, EventArgs e)
         {
-            //register
+         
             frm_Register Register = new frm_Register();
             this.Hide();
             Register.ShowDialog();
