@@ -51,5 +51,10 @@ namespace MaestroMusic
             pb_playPause.Enabled = true;
 
         }
+
+        private void pb_playBTN_Click(object sender, EventArgs e)
+        {
+            pb_playPause_Click( sender,  e);
+        }
     }
 }

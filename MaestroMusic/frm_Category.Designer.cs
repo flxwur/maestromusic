@@ -35,15 +35,17 @@
             this.lbl_length0 = new System.Windows.Forms.Label();
             this.lbl_length1 = new System.Windows.Forms.Label();
             this.pb_playPause = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pb_playBTN = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_logoRightTop = new System.Windows.Forms.PictureBox();
             this.pb_pausePlay = new System.Windows.Forms.PictureBox();
+            this.lbl_songName = new System.Windows.Forms.Label();
+            this.lbl_songLength = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_playBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -115,15 +117,16 @@
             this.pb_playPause.TabStop = false;
             this.pb_playPause.Click += new System.EventHandler(this.pb_playPause_Click);
             // 
-            // pictureBox5
+            // pb_playBTN
             // 
-            this.pictureBox5.BackgroundImage = global::MaestroMusic.Properties.Resources.play_icon2;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(208, 125);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
+            this.pb_playBTN.BackgroundImage = global::MaestroMusic.Properties.Resources.play_icon2;
+            this.pb_playBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pb_playBTN.Location = new System.Drawing.Point(208, 125);
+            this.pb_playBTN.Name = "pb_playBTN";
+            this.pb_playBTN.Size = new System.Drawing.Size(22, 21);
+            this.pb_playBTN.TabIndex = 17;
+            this.pb_playBTN.TabStop = false;
+            this.pb_playBTN.Click += new System.EventHandler(this.pb_playBTN_Click);
             // 
             // pictureBox4
             // 
@@ -190,18 +193,40 @@
             this.pb_pausePlay.Visible = false;
             this.pb_pausePlay.Click += new System.EventHandler(this.pb_pausePlay_Click);
             // 
+            // lbl_songName
+            // 
+            this.lbl_songName.AutoSize = true;
+            this.lbl_songName.ForeColor = System.Drawing.Color.White;
+            this.lbl_songName.Location = new System.Drawing.Point(235, 129);
+            this.lbl_songName.Name = "lbl_songName";
+            this.lbl_songName.Size = new System.Drawing.Size(227, 13);
+            this.lbl_songName.TabIndex = 23;
+            this.lbl_songName.Text = "John Denver - Take Me Home, Country Roads";
+            // 
+            // lbl_songLength
+            // 
+            this.lbl_songLength.AutoSize = true;
+            this.lbl_songLength.ForeColor = System.Drawing.Color.White;
+            this.lbl_songLength.Location = new System.Drawing.Point(703, 129);
+            this.lbl_songLength.Name = "lbl_songLength";
+            this.lbl_songLength.Size = new System.Drawing.Size(28, 13);
+            this.lbl_songLength.TabIndex = 24;
+            this.lbl_songLength.Text = "4:22";
+            // 
             // frm_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_songLength);
+            this.Controls.Add(this.lbl_songName);
             this.Controls.Add(this.pb_pausePlay);
             this.Controls.Add(this.pb_playPause);
             this.Controls.Add(this.lbl_length1);
             this.Controls.Add(this.lbl_length0);
             this.Controls.Add(this.prgsbar_songlength);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pb_playBTN);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -213,7 +238,7 @@
             this.Name = "frm_Category";
             this.Text = "Player";
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_playBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -234,11 +259,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pb_playBTN;
         private System.Windows.Forms.ProgressBar prgsbar_songlength;
         private System.Windows.Forms.Label lbl_length0;
         private System.Windows.Forms.Label lbl_length1;
         private System.Windows.Forms.PictureBox pb_playPause;
         private System.Windows.Forms.PictureBox pb_pausePlay;
+        private System.Windows.Forms.Label lbl_songName;
+        private System.Windows.Forms.Label lbl_songLength;
     }
 }
