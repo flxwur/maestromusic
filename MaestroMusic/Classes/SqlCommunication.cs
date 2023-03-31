@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace MaestroMusic
 {
@@ -36,6 +37,18 @@ namespace MaestroMusic
         #endregion
         #region generaldb
 
+        //MySqlConnection con = new MySqlConnection();
+        //con = new MySqlConnection("server=web.hak-kitz.eu; user= ; database= ; pwd= ");
+
+
+        //con = new MySqlConnection("server=eduweb20; user=f.wurzer ; database=f.wurzer; password=MyDatabase138");
+        //MySqlCommand cmd = new MySqlCommand("", con);
+        //con.Open();
+        //    cmd.CommandText = "create table test (id INT, firstname VARCHAR(50))";
+        //    cmd.ExecuteNonQuery();
+        
+        
+        
         // changes the connection string for a sspi connection
         public void changeConnstringSSPI(string adresse)
         {
