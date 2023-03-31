@@ -54,6 +54,7 @@ namespace MaestroMusic
         {
             lbl_login.Font = new Font(lbl_login.Font.Name, lbl_login.Font.SizeInPoints, FontStyle.Regular);
         }
+
     }
     }
     
