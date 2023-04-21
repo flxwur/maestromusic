@@ -37,6 +37,7 @@ namespace MaestroMusic
             //check with database
 
             //login form with constructor login passen
+            SQLCommunication.SqlConnection();
             frm_Player LogedIn = new frm_Player();
             this.Hide();
             LogedIn.ShowDialog();
