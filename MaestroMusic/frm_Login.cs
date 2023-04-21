@@ -32,16 +32,19 @@ namespace MaestroMusic
         private void lbl_login_Click(object sender, EventArgs e)
         {
             //login
-            string user = 
-            SQLCommunication.
-            //check with database
+            
+            string user = tb_username.Text;
+            string pw = tb_pw.Text;
 
-            //login form with constructor login passen
-            SQLCommunication.SqlConnection();
-            frm_Player LogedIn = new frm_Player();
-            this.Hide();
-            LogedIn.ShowDialog();
-            this.Show();
+            if(SQLCommunication.checkLogin(user, pw))
+            {
+                //login form with constructor login passen (user)
+                frm_Player LogedIn = new frm_Player();
+                this.Hide();
+                LogedIn.ShowDialog();
+                this.Show();
+            }
+
         }
 
         private void frm_Login_Load(object sender, EventArgs e)

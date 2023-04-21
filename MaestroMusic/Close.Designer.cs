@@ -82,7 +82,7 @@
             this.Controls.Add(this.lbl_close);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Close";
-            this.Text = "Close";
+            this.Text = "3";
             this.ResumeLayout(false);
             this.PerformLayout();
 
