@@ -32,7 +32,8 @@ namespace MaestroMusic
         private void lbl_login_Click(object sender, EventArgs e)
         {
             //login
-            
+            string user = 
+            SQLCommunication.
             //check with database
 
             //login form with constructor login passen

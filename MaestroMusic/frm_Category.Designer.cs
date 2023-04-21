@@ -44,6 +44,7 @@
             this.pb_pausePlay = new System.Windows.Forms.PictureBox();
             this.lbl_songName = new System.Windows.Forms.Label();
             this.lbl_songLength = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_playBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -52,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_h2
@@ -213,12 +215,22 @@
             this.lbl_songLength.TabIndex = 24;
             this.lbl_songLength.Text = "4:22";
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(296, 104);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(239, 232);
+            this.axWindowsMediaPlayer1.TabIndex = 25;
+            // 
             // frm_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.lbl_songLength);
             this.Controls.Add(this.lbl_songName);
             this.Controls.Add(this.pb_pausePlay);
@@ -245,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +280,6 @@
         private System.Windows.Forms.PictureBox pb_pausePlay;
         private System.Windows.Forms.Label lbl_songName;
         private System.Windows.Forms.Label lbl_songLength;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }

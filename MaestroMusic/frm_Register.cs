@@ -34,6 +34,9 @@ namespace MaestroMusic
 
             if (confirmPW.Equals(pw) && pw.Length >= 8)
             {
+                
+                //open connection
+
                 //register in database
 
                 //login
