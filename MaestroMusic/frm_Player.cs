@@ -18,12 +18,21 @@ namespace MaestroMusic
         public frm_Player()
         {
             InitializeComponent();
+
+        }
+
+        public string accountName = "Logged In";
+        public frm_Player(string accountName)
+        {
+            InitializeComponent();
+            this.accountName = accountName;
+            lbl_account.Text = accountName;
         }
 
         private void pb_userIcon_Click(object sender, EventArgs e)
         {
-            //login form with constructor login passen
-            
+            // opens category form and passes category title
+
             Close LogedIn = new Close();
             this.Hide();
             LogedIn.ShowDialog();
@@ -41,7 +50,7 @@ namespace MaestroMusic
         private void pb_classical_Click(object sender, EventArgs e)
         {
             currentCategory = "Classical";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -51,7 +60,7 @@ namespace MaestroMusic
         private void pb_pop_Click(object sender, EventArgs e)
         {
             currentCategory = "Pop";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -61,7 +70,7 @@ namespace MaestroMusic
         private void pb_hiphop_Click(object sender, EventArgs e)
         {
             currentCategory = "HipHop";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -71,7 +80,7 @@ namespace MaestroMusic
         private void pb_country_Click(object sender, EventArgs e)
         {
             currentCategory = "Country";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -81,7 +90,7 @@ namespace MaestroMusic
         private void pb_electronic_Click(object sender, EventArgs e)
         {
             currentCategory = "Electronic";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -91,7 +100,7 @@ namespace MaestroMusic
         private void pb_hardstyle_Click(object sender, EventArgs e)
         {
             currentCategory = "Hardstyle";
-            //login form with constructor login passen
+            // opens category form and passes category title
             frm_Category category = new frm_Category(currentCategory);
             this.Hide();
             category.ShowDialog();
@@ -100,9 +109,5 @@ namespace MaestroMusic
 
         
         #endregion
-
-
-
-        //leave  pb_classical.Size = new Size(130, 130);
     }
 }

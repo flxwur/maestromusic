@@ -146,6 +146,15 @@ namespace MaestroMusic
             }
             
         }
+        public static void Register(string user, string mail, string pw)
+        {
+            conn.Open();
+            comm.CommandText = "INSERT INTO anmeldung (username, email, password) VALUES ('" + user + "', '" + mail + "', '" + pw + "')";
+            comm.ExecuteNonQuery();
+            MessageBox.Show("Sucessfully registered!");
+            conn.Close();
+          
+        }
 
         #endregion
     }

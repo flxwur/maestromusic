@@ -17,6 +17,7 @@ namespace MaestroMusic
             InitializeComponent();
         }
 
+        // passes the category title to the category form
         public frm_Category(string h1)
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace MaestroMusic
             this.Close();
         }
 
+        // changes the icon when clicking on the play icon
         private void pb_playPause_Click(object sender, EventArgs e)
         {
             pb_pausePlay.Visible = true;
@@ -42,6 +44,7 @@ namespace MaestroMusic
             pb_playPause.Enabled = false;
         }
 
+        // changes the icon when clicking on the pause icon
         private void pb_pausePlay_Click(object sender, EventArgs e)
         {
             pb_pausePlay.Visible = false;
