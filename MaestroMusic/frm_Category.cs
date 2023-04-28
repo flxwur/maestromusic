@@ -12,6 +12,9 @@ namespace MaestroMusic
 {
     public partial class frm_Category : Form
     {
+        string[] path;
+        string[] files;
+
         public frm_Category()
         {
             InitializeComponent();
@@ -40,6 +43,9 @@ namespace MaestroMusic
 
             pb_playPause.Visible = false;
             pb_playPause.Enabled = false;
+            
+            wmd_player.URL = lb_playlist.SelectedItem.ToString();   //Playes the song
+            wmd_player.settings.autoStart = true;
         }
 
         private void pb_pausePlay_Click(object sender, EventArgs e)
@@ -55,6 +61,20 @@ namespace MaestroMusic
         private void pb_playBTN_Click(object sender, EventArgs e)
         {
             pb_playPause_Click( sender,  e);
+        }
+
+        private void btn_upload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog musicLoader = new OpenFileDialog();
+            if (musicLoader.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                files = musicLoader.SafeFileNames;
+                path = musicLoader.FileNames;
+                for (int i = 0; i < files.Length; i++)
+                {
+                    lb_playlist.Items.Add(path[i]);
+                }
+            }
         }
     }
 }
