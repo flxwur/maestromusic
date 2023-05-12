@@ -38,6 +38,7 @@ namespace MaestroMusic
         #region generaldb
 
 
+
         public static void SqlConnection()
         {
             try
@@ -113,6 +114,7 @@ namespace MaestroMusic
             }
 
         }
+
 
         public static bool checkLogin(string user, string pw)
         {
