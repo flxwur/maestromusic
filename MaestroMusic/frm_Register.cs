@@ -34,12 +34,12 @@ namespace MaestroMusic
 
             if (confirmPW.Equals(pw) && pw.Length >= 8)
             {
-                //register in database
 
-                //login
+                // opens connection & registers in database
+                SQLCommunication.Register(username,mail,pw);
 
                 //login form with constructor login passen
-                frm_Player LogedIn = new frm_Player();
+                frm_Player LogedIn = new frm_Player(username);
                 this.Hide();
                 LogedIn.ShowDialog();
                 this.Show();

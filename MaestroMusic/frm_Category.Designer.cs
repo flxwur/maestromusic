@@ -37,15 +37,25 @@
             this.pb_playPause = new System.Windows.Forms.PictureBox();
             this.pb_logoRightTop = new System.Windows.Forms.PictureBox();
             this.pb_pausePlay = new System.Windows.Forms.PictureBox();
+
             this.lb_playlist = new System.Windows.Forms.ListBox();
             this.wmd_player = new AxWMPLib.AxWindowsMediaPlayer();
             this.btn_upload = new System.Windows.Forms.Button();
             this.pb_next = new System.Windows.Forms.PictureBox();
+
+            this.lbl_songName = new System.Windows.Forms.Label();
+            this.lbl_songLength = new System.Windows.Forms.Label();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.wmd_player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next)).BeginInit();
+
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+
             this.SuspendLayout();
             // 
             // lbl_h2
@@ -174,16 +184,31 @@
             this.pb_next.TabStop = false;
             this.pb_next.Click += new System.EventHandler(this.pb_next_Click);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(296, 104);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(239, 232);
+            this.axWindowsMediaPlayer1.TabIndex = 25;
+            // 
             // frm_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+
             this.Controls.Add(this.pb_next);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.wmd_player);
             this.Controls.Add(this.lb_playlist);
+
+            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.lbl_songLength);
+            this.Controls.Add(this.lbl_songName);
+
             this.Controls.Add(this.pb_pausePlay);
             this.Controls.Add(this.pb_playPause);
             this.Controls.Add(this.lbl_length1);
@@ -198,8 +223,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.wmd_player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_next)).EndInit();
+
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,9 +244,15 @@
         private System.Windows.Forms.Label lbl_length1;
         private System.Windows.Forms.PictureBox pb_playPause;
         private System.Windows.Forms.PictureBox pb_pausePlay;
+
         private System.Windows.Forms.ListBox lb_playlist;
         private AxWMPLib.AxWindowsMediaPlayer wmd_player;
         private System.Windows.Forms.Button btn_upload;
         private System.Windows.Forms.PictureBox pb_next;
+
+        private System.Windows.Forms.Label lbl_songName;
+        private System.Windows.Forms.Label lbl_songLength;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+
     }
 }

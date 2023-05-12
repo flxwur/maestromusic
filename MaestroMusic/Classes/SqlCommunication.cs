@@ -30,15 +30,15 @@ namespace MaestroMusic
             }
         }
 
-        public static SqlConnection conn = new SqlConnection();
-        public static SqlCommand comm = new SqlCommand();
-        public static SqlDataReader SqlDR;
+        public static MySqlConnection conn = new MySqlConnection("server=eduweb20; user=f.wurzer ; database=f.wurzer; password=MyDatabase138");
+        public static MySqlCommand comm = new MySqlCommand("", conn);
+        public static MySqlDataReader SqlDR;
 
         #endregion
         #region generaldb
 
 
-        //con = new MySqlConnection("server=web.hak-kitz.eu; user= ; database= ; pwd= ");
+
         public static void SqlConnection()
         {
             try
@@ -92,9 +92,8 @@ namespace MaestroMusic
                 string output = "";
                 comm.CommandText = "";
 
-
                 //new SqlDataReader
-                SqlDataReader reader = comm.ExecuteReader();
+                MySqlDataReader reader = comm.ExecuteReader();
 
                 while (reader.HasRows)
                 {
@@ -114,6 +113,49 @@ namespace MaestroMusic
                 return "";
             }
 
+        }
+
+
+        public static bool checkLogin(string user, string pw)
+        {
+
+           
+            conn.Open();
+            if (pw != string.Empty || user != string.Empty)
+            {
+                comm.CommandText = "select * from anmeldung where username='" + user + "' and password='" + pw + "'";
+                MySqlDataReader dr = comm.ExecuteReader();
+                if (dr.Read())
+                {
+                    dr.Close();
+                    conn.Close();
+                    return true;
+                }
+                else
+                {
+                    dr.Close();
+                    MessageBox.Show("Try again! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conn.Close();
+                    return false;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conn.Close();
+                return false;
+            }
+            
+        }
+        public static void Register(string user, string mail, string pw)
+        {
+            conn.Open();
+            comm.CommandText = "INSERT INTO anmeldung (username, email, password) VALUES ('" + user + "', '" + mail + "', '" + pw + "')";
+            comm.ExecuteNonQuery();
+            MessageBox.Show("Sucessfully registered!");
+            conn.Close();
+          
         }
 
         #endregion

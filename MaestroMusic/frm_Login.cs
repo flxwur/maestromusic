@@ -20,6 +20,7 @@ namespace MaestroMusic
             InitializeComponent();
         }
 
+        // register process
         private void lbl_registerLink_Click(object sender, EventArgs e)
         {
          
@@ -29,24 +30,32 @@ namespace MaestroMusic
             this.Show();
         }
 
+        // login process
         private void lbl_login_Click(object sender, EventArgs e)
         {
-            //login
+            // takes the values from user and puts it into string
+            
+            string user = tb_username.Text;
+            string pw = tb_pw.Text;
 
-            //check with database
+            if(SQLCommunication.checkLogin(user, pw))
+            {
+                //login form with constructor login passen (user, pw)
 
-            //login form with constructor login passen
-            SQLCommunication.SqlConnection();
-            frm_Player LogedIn = new frm_Player();
-            this.Hide();
-            LogedIn.ShowDialog();
-            this.Show();
+                frm_Player LogedIn = new frm_Player(user);
+                this.Hide();
+                LogedIn.ShowDialog();
+                this.Show();
+            }
+
+
         }
 
         private void frm_Login_Load(object sender, EventArgs e)
         {
         }
 
+        // *hover effect* for login lbl
         private void frm_Login_Hover(object sender, EventArgs e)
         {
             lbl_login.Font = new Font(lbl_login.Font.Name, lbl_login.Font.SizeInPoints, FontStyle.Underline);

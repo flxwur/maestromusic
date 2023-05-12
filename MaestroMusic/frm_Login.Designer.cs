@@ -155,11 +155,11 @@
             // 
             this.lbl_login.AutoSize = true;
             this.lbl_login.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_login.Font = new System.Drawing.Font("Arial", 12.25F, System.Drawing.FontStyle.Underline);
+            this.lbl_login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.Color.White;
             this.lbl_login.Location = new System.Drawing.Point(170, 292);
             this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(49, 19);
+            this.lbl_login.Size = new System.Drawing.Size(47, 18);
             this.lbl_login.TabIndex = 11;
             this.lbl_login.Text = "Login";
             this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);

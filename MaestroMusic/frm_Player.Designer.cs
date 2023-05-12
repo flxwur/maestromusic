@@ -39,6 +39,7 @@
             this.pb_classical = new System.Windows.Forms.PictureBox();
             this.pb_logoRightTop = new System.Windows.Forms.PictureBox();
             this.pb_userIcon = new System.Windows.Forms.PictureBox();
+            this.lbl_account = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_hardstyle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_electronic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_country)).BeginInit();
@@ -161,6 +162,18 @@
             this.pb_userIcon.TabStop = false;
             this.pb_userIcon.Click += new System.EventHandler(this.pb_userIcon_Click);
             // 
+            // lbl_account
+            // 
+            this.lbl_account.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_account.ForeColor = System.Drawing.Color.White;
+            this.lbl_account.Location = new System.Drawing.Point(493, 12);
+            this.lbl_account.Name = "lbl_account";
+            this.lbl_account.Size = new System.Drawing.Size(268, 25);
+            this.lbl_account.TabIndex = 19;
+            this.lbl_account.Text = "Logged In";
+            this.lbl_account.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frm_Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,6 +181,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_account);
             this.Controls.Add(this.pb_userIcon);
             this.Controls.Add(this.pb_hardstyle);
             this.Controls.Add(this.pb_electronic);
@@ -207,5 +221,6 @@
         private System.Windows.Forms.PictureBox pb_electronic;
         private System.Windows.Forms.PictureBox pb_country;
         private System.Windows.Forms.PictureBox pb_userIcon;
+        private System.Windows.Forms.Label lbl_account;
     }
 }
