@@ -40,10 +40,12 @@
             this.lb_playlist = new System.Windows.Forms.ListBox();
             this.wmd_player = new AxWMPLib.AxWindowsMediaPlayer();
             this.btn_upload = new System.Windows.Forms.Button();
+            this.pb_next = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_playPause)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wmd_player)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_next)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_h2
@@ -161,12 +163,24 @@
             this.btn_upload.UseVisualStyleBackColor = true;
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
+            // pb_next
+            // 
+            this.pb_next.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pb_next.BackgroundImage")));
+            this.pb_next.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_next.Location = new System.Drawing.Point(424, 365);
+            this.pb_next.Name = "pb_next";
+            this.pb_next.Size = new System.Drawing.Size(31, 29);
+            this.pb_next.TabIndex = 28;
+            this.pb_next.TabStop = false;
+            this.pb_next.Click += new System.EventHandler(this.pb_next_Click);
+            // 
             // frm_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(33)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_next);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.wmd_player);
             this.Controls.Add(this.lb_playlist);
@@ -185,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_logoRightTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_pausePlay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wmd_player)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_next)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +218,6 @@
         private System.Windows.Forms.ListBox lb_playlist;
         private AxWMPLib.AxWindowsMediaPlayer wmd_player;
         private System.Windows.Forms.Button btn_upload;
+        private System.Windows.Forms.PictureBox pb_next;
     }
 }
